@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(curl:*)",
+      "Bash(cat:*)",
+      "Bash(node:*)",
+      "Bash(npm run dev:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill //F //PID 84868)",
+      "Bash(taskkill:*)",
+      "Bash(echo.)",
+      "Bash(git add:*)"
+    ]
+  }
+}
