@@ -54,50 +54,24 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ error: 'Email already registered' });
     }
 
-    // Create user
+    // Create user (auto-verified)
     const id = uuidv4();
     const passwordHash = await bcrypt.hash(password, 10);
-    const verificationToken = uuidv4();
     const university = extractOrganization(email, role);
 
     db.prepare(`
-      INSERT INTO users (id, email, password_hash, name, role, university, verification_token)
+      INSERT INTO users (id, email, password_hash, name, role, university, verified)
       VALUES (?, ?, ?, ?, ?, ?, ?)
-    `).run(id, email.toLowerCase(), passwordHash, name, role, university, verificationToken);
-
-    // Mock email verification - log to console
-    console.log('\n========================================');
-    console.log('MOCK EMAIL VERIFICATION');
-    console.log('========================================');
-    console.log(`To: ${email}`);
-    console.log(`Subject: Verify your University Freelance account`);
-    console.log(`\nClick this link to verify your email:`);
-    console.log(`http://localhost:3001/api/auth/verify/${verificationToken}`);
-    console.log('========================================\n');
+    `).run(id, email.toLowerCase(), passwordHash, name, role, university, true);
 
     res.status(201).json({
-      message: 'Registration successful! Check console for verification link.',
+      message: 'Registration successful! You can now log in.',
       userId: id
     });
   } catch (error) {
     console.error('Registration error:', error);
     res.status(500).json({ error: 'Registration failed' });
   }
-});
-
-// GET /api/auth/verify/:token
-router.get('/verify/:token', (req, res) => {
-  const { token } = req.params;
-
-  const user = db.prepare('SELECT id, email FROM users WHERE verification_token = ?').get(token);
-
-  if (!user) {
-    return res.status(400).json({ error: 'Invalid verification token' });
-  }
-
-  db.prepare('UPDATE users SET verified = 1, verification_token = NULL WHERE id = ?').run(user.id);
-
-  res.json({ message: 'Email verified successfully! You can now log in.' });
 });
 
 // POST /api/auth/login
@@ -118,10 +92,6 @@ router.post('/login', async (req, res) => {
     const validPassword = await bcrypt.compare(password, user.password_hash);
     if (!validPassword) {
       return res.status(401).json({ error: 'Invalid email or password' });
-    }
-
-    if (!user.verified) {
-      return res.status(401).json({ error: 'Please verify your email before logging in' });
     }
 
     const token = jwt.sign({ userId: user.id }, JWT_SECRET, { expiresIn: '7d' });

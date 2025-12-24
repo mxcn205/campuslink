@@ -33,7 +33,6 @@ app.listen(PORT, () => {
   console.log('API endpoints:');
   console.log('  POST /api/auth/register - Register new user');
   console.log('  POST /api/auth/login - Login');
-  console.log('  GET  /api/auth/verify/:token - Verify email');
   console.log('  GET  /api/auth/me - Get current user');
   console.log('  GET  /api/projects - List projects');
   console.log('  POST /api/projects - Create project');

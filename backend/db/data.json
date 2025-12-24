@@ -31,6 +31,36 @@
       "verification_token": null,
       "verified": true,
       "created_at": "2025-12-24T00:25:19.488Z"
+    },
+    {
+      "id": "1276d0d1-7301-445d-811a-a29a55f0113f",
+      "email": "test@test.edu",
+      "password_hash": "$2a$10$QQA1/3p5UXyIY2i1kkom5uXgSwut0pFCV/24WYOpidq6eQDMg5Dji",
+      "name": "Test User",
+      "role": "student",
+      "university": "Test",
+      "verified": true,
+      "created_at": "2025-12-24T01:54:24.545Z"
+    },
+    {
+      "id": "061e35f7-50cd-4b49-a358-29122e5b9747",
+      "email": "admin4@mc.com",
+      "password_hash": "$2a$10$UlJ4e80FcEsi3bPI4K8huenvTM9em1E.Omkan.g7mJtsfHmglSj3y",
+      "name": "Max Chen",
+      "role": "company",
+      "university": "Mc",
+      "verified": true,
+      "created_at": "2025-12-24T01:57:25.514Z"
+    },
+    {
+      "id": "13b00ca3-13a3-4ece-89c9-5311ff0be8ee",
+      "email": "admin4@andrew.cmu.edu",
+      "password_hash": "$2a$10$wQxmPTfZN50VH0JgJEpsbOtZeX.apYJr2bpgNNFsU3ZuV0mDbniq.",
+      "name": "max",
+      "role": "student",
+      "university": "Andrew Cmu",
+      "verified": true,
+      "created_at": "2025-12-24T01:58:38.406Z"
     }
   ],
   "projects": [
@@ -60,6 +90,15 @@
       "skills": "3",
       "status": "open",
       "created_at": "2025-12-24T00:19:00.952Z"
+    },
+    {
+      "id": "550224c2-75ad-4869-9287-ab801817c106",
+      "company_id": "061e35f7-50cd-4b49-a358-29122e5b9747",
+      "title": "4",
+      "description": "2",
+      "skills": "3",
+      "status": "open",
+      "created_at": "2025-12-24T01:58:07.400Z"
     }
   ],
   "applications": [
@@ -69,6 +108,13 @@
       "student_id": "09fadebe-06f1-49c9-ac88-9e9d593427a2",
       "message": "testA",
       "created_at": "2025-12-24T00:28:50.234Z"
+    },
+    {
+      "id": "de343527-a21a-492b-bbf8-696bb041e35b",
+      "project_id": "550224c2-75ad-4869-9287-ab801817c106",
+      "student_id": "13b00ca3-13a3-4ece-89c9-5311ff0be8ee",
+      "message": "6666",
+      "created_at": "2025-12-24T01:58:58.669Z"
     }
   ],
   "submissions": [],

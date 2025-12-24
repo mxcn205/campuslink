@@ -10,7 +10,16 @@
       "Bash(taskkill //F //PID 84868)",
       "Bash(taskkill:*)",
       "Bash(echo.)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: CampusLink - University Freelance Platform\n\nFeatures:\n- User authentication \\(students with .edu emails, companies\\)\n- Project posting and management for companies\n- Project browsing and applications for students\n- Work submission and review system\n- Dashboard with statistics\n\nTech stack:\n- Frontend: React + Vite\n- Backend: Node.js + Express\n- Database: JSON file-based storage\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git config:*)",
+      "Bash(git commit:*)",
+      "Bash(gh auth status:*)",
+      "Bash(gh repo create:*)",
+      "Bash(gh auth login:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth:*)"
     ]
   }
 }
