@@ -61,6 +61,36 @@
       "university": "Andrew Cmu",
       "verified": true,
       "created_at": "2025-12-24T01:58:38.406Z"
+    },
+    {
+      "id": "44194b34-a2c1-4deb-995e-348ea93a4817",
+      "email": "admin2@mc.com",
+      "password_hash": "$2a$10$VTT7azNj.j05csQIVjmdweQyiJsipjqCNmeq1WmgZX5Hm29oqb1ji",
+      "name": "Max Chen",
+      "role": "company",
+      "university": "Mc",
+      "verified": true,
+      "created_at": "2025-12-24T02:12:25.876Z"
+    },
+    {
+      "id": "3ba7de9f-2b97-4468-ba1b-a2a22ac97b52",
+      "email": "admin6@andrew.cmu.edu",
+      "password_hash": "$2a$10$cC.vcdgn4t1g2SaIZDJipOaeEfxzap0LFHpSSz0r6/MlccV7Fk17a",
+      "name": "Max Chen",
+      "role": "company",
+      "university": "Andrew",
+      "verified": true,
+      "created_at": "2025-12-24T02:13:11.805Z"
+    },
+    {
+      "id": "2c44450c-043d-4e68-83d3-bcf1de26f1d6",
+      "email": "admin7@mc.com",
+      "password_hash": "$2a$10$w/exLootEC.vtK9Dr9yNPO/Kd2.AyPdsjy7IFSZr1uhbECovsdXia",
+      "name": "Max Chen",
+      "role": "company",
+      "university": "Mc",
+      "verified": true,
+      "created_at": "2025-12-24T02:14:10.463Z"
     }
   ],
   "projects": [

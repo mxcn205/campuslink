@@ -26,8 +26,8 @@ export default function Register() {
 
     try {
       await register(formData);
-      setSuccess('Registration successful! Check the server console for your verification link.');
-      setTimeout(() => navigate('/login'), 3000);
+      setSuccess('Registration successful! Redirecting to login...');
+      setTimeout(() => navigate('/login'), 1500);
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed');
     } finally {
